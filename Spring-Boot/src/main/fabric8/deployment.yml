@@ -1,0 +1,21 @@
+apiVersion: "extensions/v1beta1"
+kind: "Deployment"
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+          - env:
+             - name: JAVA_OPTIONS
+               value: "-Xms1024m -Xmx1536m"
+      volumes:
+        - name: config
+          configMap:
+            name: ${project.artifactId}
+            items:
+            - key: application.properties
+              path: application.properties
+      containers:
+        - volumeMounts:
+            - name: config
+              mountPath: /app/config
