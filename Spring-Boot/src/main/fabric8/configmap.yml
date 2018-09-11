@@ -3,7 +3,7 @@ metadata:
 data:
   application.properties: |
     # spring application proeprties file
-    spring.main.sources=com.predina.geo.ws
+    spring.main.sources=com.lakshmi
     server.compression.enabled = true
     server.compression.min-response-size = 5120
     server.compression.mime-types = application/json,application/xml,text/xml,text/plain
