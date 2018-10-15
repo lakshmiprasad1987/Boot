@@ -1,0 +1,8 @@
+package com.infy.service;
+
+import com.infy.bean.UserBean;
+
+public interface UserService {
+	public UserBean addUser(UserBean user);
+
+}
