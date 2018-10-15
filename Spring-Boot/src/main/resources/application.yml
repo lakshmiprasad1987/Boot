@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: dev
+    
+  mvc:
+    view:
+      prefix:/WEB-INF/jsp/
+      suffix:.jsp
+          
+---
+spring:
+  profiles: dev
+
+app:
+  crossapplicationURL:http://localhost:4200
+  
+welcome:
+  message:Hello Mkyong Dev
+    
+---
+spring:
+  profiles: prod
+  
+welcome:
+  message:Hello Mkyong PROD
+  
